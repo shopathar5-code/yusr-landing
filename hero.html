@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يسر - لوحة القمر الذهبية</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1657600869122104');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1657600869122104&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+        
+        /* إعدادات الصفحة والحماية */
+        body { 
+            margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Tajawal', sans-serif;
+            -webkit-touch-callout: none; -webkit-user-select: none; user-select: none;
+        }
+        img { pointer-events: none; -webkit-user-drag: none; user-select: none; display: block; width: 100%; height: auto; }
+        
+        /* الحاوية الرئيسية (لتبدو كصفحة هبوط احترافية في الهاتف والكمبيوتر) */
+        .container { max-width: 600px; margin: 0 auto; background-color: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        
+        /* تصميم الاستمارة */
+        .yusr-form-wrapper { background-color: #0b2e1f; padding: 30px 20px; text-align: right; border-top: 4px solid #d4af37; border-bottom: 4px solid #d4af37; }
+        .yusr-form-title { color: #d4af37; text-align: center; font-size: 24px; margin-bottom: 25px; font-weight: 700; }
+        .yusr-row { display: flex; gap: 12px; margin-bottom: 15px; flex-wrap: nowrap; }
+        .yusr-col { flex: 1; width: 50%; }
+        .yusr-form-group label { display: block; color: #fff; margin-bottom: 6px; font-size: 15px; font-weight: bold; }
+        .yusr-form-group input { width: 100%; padding: 12px; background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 8px; font-family: 'Tajawal', sans-serif; font-size: 14px; box-sizing: border-box; }
+        .yusr-form-group input:focus { outline: none; border: 2px solid #d4af37; background-color: #fff; }
+        .yusr-submit-btn { width: 100%; background: linear-gradient(135deg, #d4af37, #aa8222); color: #fff; font-size: 20px; font-family: 'Tajawal', sans-serif; font-weight: bold; border: none; padding: 16px; border-radius: 8px; cursor: pointer; margin-top: 15px; transition: 0.3s; }
+        .yusr-submit-btn:disabled { background: #777; cursor: not-allowed; }
+        
+        /* الزر العائم */
+        .floating-order-btn { position: fixed; bottom: 20px; right: 20px; background-color: #d4af37; color: #0b2e1f; padding: 15px 30px; border-radius: 50px; font-family: 'Tajawal', sans-serif; font-size: 16px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; cursor: pointer; animation: pulse 2s infinite; border: 2px solid #fff; transition: 0.3s ease; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        @media (max-width: 600px) { .floating-order-btn { bottom: 20px; left: 20px; right: 20px; text-align: center; } }
+    </style>
+</head>
+<body>
+
+<div class="floating-order-btn" id="floatingBtn" onclick="scrollToForm()">أطلبها الآن بتغليف فاخر</div>
+
+<div class="container">
+    <!-- الصورة الأولى -->
+    <img src="https://res.cloudinary.com/u0jqo5ok/image/upload/v1787315532/Gemini_Generated_Image_pzv9sypzv9sypzv9_1.webp" alt="لوحة القمر - يسر">
+
+    <!-- الاستمارة -->
+    <div class="yusr-form-wrapper" id="order-form-section">
+        <h2 class="yusr-form-title">أكمل بياناتك لتأكيد الطلب</h2>
+        <form id="yusrOrderForm">
+            <input type="hidden" name="action" value="new_order">
+            <input type="hidden" name="orderId" value="YUSR-" id="orderIdField">
+
+            <div class="yusr-row">
+                <div class="yusr-col yusr-form-group">
+                    <label>الاسم الكامل</label>
+                    <input type="text" id="custName" name="fullname" required placeholder="الاسم واللقب">
+                </div>
+                <div class="yusr-col yusr-form-group">
+                    <label>رقم الهاتف</label>
+                    <input type="tel" id="custPhone" name="phone" required placeholder="05/06/07 XXXXXXXX" maxlength="10">
+                </div>
+            </div>
+            <div class="yusr-row">
+                <div class="yusr-col yusr-form-group">
+                    <label>اسم صاحب الهدية</label>
+                    <input type="text" id="giftName" name="receiverName" required placeholder="مثال: محمد">
+                </div>
+                <div class="yusr-col yusr-form-group">
+                    <label>تاريخ ميلاده</label>
+                    <input type="text" id="giftDate" name="birthdate" required placeholder="مثال: 15 جويلية 2007">
+                </div>
+            </div>
+            <div class="yusr-form-group">
+                <label>مكان التوصيل "الولاية + الدائرة"</label>
+                <input type="text" id="custAddress" name="location" required placeholder="مثال: الجزائر، برج الكيفان">
+            </div>
+            <button type="submit" class="yusr-submit-btn" id="submitBtn">تأكيد الطلب الآن</button>
+        </form>
+    </div>
+
+    <!-- الصورة الثانية -->
+    <img src="https://res.cloudinary.com/u0jqo5ok/image/upload/v1787315618/Gemini_Generated_Image_optwefoptwefoptw_1.webp" alt="تفاصيل اللوحة">
+
+    <!-- الصورة الثالثة -->
+    <img src="https://res.cloudinary.com/u0jqo5ok/image/upload/v1787315532/Gemini_Generated_Image_pzv9sypzv9sypzv9_1.webp" alt="فخامة يسر">
+</div>
+
+<script>
+    // الحماية
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || (e.ctrlKey && e.keyCode == 85)) return false;
+    };
+
+    function scrollToForm() {
+        document.getElementById('order-form-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('orderIdField').value = 'YUSR-' + Math.floor(1000 + Math.random() * 9000);
+        
+        const formSection = document.getElementById('order-form-section');
+        const floatingBtn = document.getElementById('floatingBtn');
+
+        if (formSection && floatingBtn) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    floatingBtn.style.opacity = entry.isIntersecting ? '0' : '1';
+                    floatingBtn.style.visibility = entry.isIntersecting ? 'hidden' : 'visible';
+                });
+            }, { threshold: 0.1 });
+            observer.observe(formSection);
+        }
+
+        const form = document.getElementById('yusrOrderForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const phone = document.getElementById('custPhone').value;
+                
+                if (!/^(05|06|07)\d{8}$/.test(phone)) {
+                    alert("⚠️ عذراً، الرجاء إدخال رقم هاتف صحيح يبدأ بـ (05, 06, أو 07) ومكون من 10 أرقام.");
+                    return;
+                }
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = "جاري تأكيد طلبك... ⏳";
+
+                // بيكسل الشراء (تم تعديل السعر إلى 2200 بناء على صفحة الشكر)
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Purchase', { value: 2200.00, currency: 'DZD', content_name: 'لوحة القمر الذهبية' });
+                }
+
+                const googleAppScriptURL = 'https://script.google.com/macros/s/AKfycbyLEMIUb6MijmtTfpnzNd5BxWLlIrfdwHCmrbWPGmRsUkVuJJbcKf8RQk_7TMXORiDIiQ/exec'; 
+                const formData = new FormData(form);
+                const searchParams = new URLSearchParams();
+                for (const pair of formData.entries()) { searchParams.append(pair[0], pair[1]); }
+
+                fetch(googleAppScriptURL, { 
+                    method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: searchParams
+                }).then(() => {
+                    // الانتقال لصفحة الشكر
+                    window.location.href = 'thankyou.html';
+                }).catch(() => {
+                    alert("حدث خطأ، يرجى المحاولة مرة أخرى.");
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "تأكيد الطلب الآن";
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>
